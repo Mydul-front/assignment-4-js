@@ -62,7 +62,12 @@ console.log(results); */
 const person2 = { name: "mitu", gender: "female", age: 20 };
 
 function validProposal(person1, person2) {
-  if (typeof person1 !== "object" || typeof person2 !== "object") {
+  if (
+    typeof person1 !== "object" ||
+    typeof person2 !== "object" ||
+    Array.isArray(person1) ||
+    Array.isArray(person2)
+  ) {
     return "Invalid";
   }
   if (person1.gender === person2.gender) {
@@ -77,3 +82,17 @@ function validProposal(person1, person2) {
 
 const results = validProposal(person1, person2);
 console.log(results); */
+
+
+
+
+
+function  calculateSleepTime( times ) {
+          for(let i=0; i<times.length; i++){
+               if(typeof times[i] !== 'number'){
+                    return 'Invalid';
+               }
+               
+          }
+}
+
